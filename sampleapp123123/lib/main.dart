@@ -1,6 +1,7 @@
 
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:sampleapp123123/AnimationTestPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -51,6 +52,15 @@ class RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('startup Name Generator'),
+        leading: IconButton(
+          icon: Icon(Icons.abc),
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AnimationTestPage())
+            );
+          },
+        ),
       ),
       body: _buildSuggestions(),
     );
